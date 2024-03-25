@@ -26,6 +26,7 @@ const Gallery = () => {
           {dataImages.map((image, index) => (
             <div className="flex flex-1">
               <img
+                key={index}
                 src={image}
                 className="object-cover w-48 "
               />

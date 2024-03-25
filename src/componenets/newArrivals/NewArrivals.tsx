@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Buttons from "../../Features/buttons";
 import axios from "axios";
 import { IoIosStar } from "react-icons/io";
 
-const NewArrivals = () => {
+const NewArrivals: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [products, setProducts] = useState([]);
 
@@ -15,7 +15,7 @@ const NewArrivals = () => {
     { id: 4, label: "All Products", apiName: "" },
   ];
 
-  const renderItems = (index) => {
+  const renderItems = (index: any) => {
     setSelectedIndex(index);
     getProducts(buttonList[index].apiName);
   };
@@ -24,7 +24,7 @@ const NewArrivals = () => {
     getProducts(buttonList[selectedIndex].apiName);
   }, []);
 
-  async function getProducts(apiName) {
+  async function getProducts(apiName: any) {
     try {
       const res = await axios.get(`http://localhost:3000/${apiName}`);
       if (res.status === 200) {
@@ -58,7 +58,7 @@ const NewArrivals = () => {
       </div>
       <div className="flex p-12 justify-center items-center w-full  bg-gray-200">
         <div className=" grid grid-cols-3 gap-12">
-          {products.map((product, index) => (
+          {products.map((product: any, index: any) => (
             <div
               key={index}
               className=" flex flex-col gap-2 bg-white p-4 rounded-md"
