@@ -7,7 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const HeaderLogo = () => {
+const HeaderLogo: React.FC = () => {
   return (
     <div className=" ">
       <div className="flex gap-6 ">

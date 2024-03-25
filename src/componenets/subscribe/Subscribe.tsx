@@ -2,7 +2,7 @@ import React from "react";
 import { images } from "../../Features/images";
 import Buttons from "../../Features/buttons";
 
-const Subscribe = () => {
+const Subscribe: React.FC = () => {
   return (
     <div className="">
       <div className="flex flex-row justify-between">

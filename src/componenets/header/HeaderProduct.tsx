@@ -2,7 +2,7 @@ import React from "react";
 import { images } from "../../Features/images";
 import Buttons from "../../Features/buttons";
 
-const HeaderProduct = () => {
+const HeaderProduct: React.FC = () => {
   return (
     <div className="flex flex-row w-full justify-center py-5 ">
       <div className="md:flex hidden flex-1 rounded-md  justify-center items-center">

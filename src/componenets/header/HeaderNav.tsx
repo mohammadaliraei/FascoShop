@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { images } from "../../Features/images";
 
-const HeaderNav = () => {
+const HeaderNav: React.FC = () => {
   const links = [
     { name: "Home", link: "/" },
     { name: "Shop", link: "/" },

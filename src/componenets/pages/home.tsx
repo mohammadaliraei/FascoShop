@@ -8,7 +8,7 @@ import Gallery from "../gallery/Gallery";
 import Testimonials from "../testimonials/Testimonials";
 import Subscribe from "../subscribe/Subscribe";
 import Footer from "../footer/Footer";
-const home = () => {
+const home: React.FC = () => {
   return (
     <div className="flex flex-col gap-6 w-full">
       <Header />

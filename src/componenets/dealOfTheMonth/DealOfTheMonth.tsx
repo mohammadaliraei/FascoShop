@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Buttons from "../../Features/buttons";
 import SwiperProducts from "./SwiperProducts";
 
@@ -7,27 +7,22 @@ const DealOfTheMonth = () => {
   const [Hr, setHr] = useState(0);
   const [Mins, setMins] = useState(0);
   const [Sec, setSec] = useState(0);
-  const [inputDate, setInputDate] = useState(0);
   const [currentDate, setCurrentDate] = useState(0);
-  const [timer, setTimer] = useState(0);
 
-  // useEffect(() => {
-  //   const currentDateObj = new Date().getTime();
-  //   const changingDateObj = new Date("23 march 2024").getTime();
+  useEffect(() => {
+    const currentDateObj = new Date().getTime();
+    const changingDateObj = new Date("23 march 2024").getTime();
 
-  //   const totalSeconds = (changingDateObj - currentDateObj) / 1000; // convet to second
-  //   setInterval(() => {
-  //     setCurrentDate(totalSeconds - 1);
-  //   }, 1000);
+    const totalSeconds = (changingDateObj - currentDateObj) / 1000; // convet to second
+    setInterval(() => {
+      setCurrentDate(totalSeconds - 1);
+    }, 1000);
 
-  //   setDays(Math.floor(totalSeconds / 86400)); // convert to days
-  //   setHr(Math.floor(totalSeconds / 3600) % 24);
-  //   setMins(Math.floor(totalSeconds / 60) % 60);
-  //   setSec(Math.floor(totalSeconds % 60));
-  // }, [currentDate]);
-
-  const onChnageHandler = () => {};
-  const onClickHandler = () => {};
+    setDays(Math.floor(totalSeconds / 86400)); // convert to days
+    setHr(Math.floor(totalSeconds / 3600) % 24);
+    setMins(Math.floor(totalSeconds / 60) % 60);
+    setSec(Math.floor(totalSeconds % 60));
+  }, [currentDate]);
 
   return (
     <div className="flex md:flex-row flex-col  w-full pl-5 py-12 rounded-md bg-gray-100">

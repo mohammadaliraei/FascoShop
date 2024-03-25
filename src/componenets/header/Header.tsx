@@ -1,18 +1,12 @@
 import React from "react";
 import { images } from "../../Features/images";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBagShopping,
-  faSearch,
-  faStar,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+
 import HeaderLogo from "./HeaderLogo";
 import HeaderNav from "./HeaderNav";
 import HeaderProduct from "./HeaderProduct";
 import HeaderNavMob from "./HeaderNavMob";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div className="flex flex-col  items-center w-full">
       <div className="flex flex-col  ">

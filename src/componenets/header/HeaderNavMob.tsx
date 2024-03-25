@@ -9,7 +9,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-const HeaderNavMob = () => {
+const HeaderNavMob: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenUser, setIsOpenUser] = useState(false);
   const handelToggle = () => {
@@ -23,12 +23,6 @@ const HeaderNavMob = () => {
     { name: "Shop", link: "/" },
     { name: "Products", link: "/" },
     { name: "About", link: "/" }, // Fixed typo in "About"
-  ];
-
-  const icons = [
-    { icon: "faUser" },
-    { icon: "faStar" },
-    { icon: "faBagShopping" },
   ];
 
   return (
