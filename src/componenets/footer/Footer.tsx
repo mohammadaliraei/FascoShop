@@ -1,4 +1,3 @@
-import React from "react";
 import { images } from "../../Features/images";
 import { FaRegCopyright } from "react-icons/fa6";
 

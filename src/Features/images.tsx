@@ -12,7 +12,6 @@ import GrilOne from "../assets/images/GrilOne.jfif";
 import GrilTwo from "../assets/images/GrilTwo.jfif";
 import GrilThree from "../assets/images/GrilThree.jfif";
 import GrilFour from "../assets/images/GrilFour.jfif";
-import GrilFive from "../assets/images/GrilFive.jfif";
 import freeShiping from "../assets/images/FreeShiping.svg";
 import support from "../assets/images/support.svg";
 import WarranyProtection from "../assets/images/WarranyProtection.svg";

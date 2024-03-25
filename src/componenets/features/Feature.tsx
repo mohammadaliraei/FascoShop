@@ -1,7 +1,7 @@
 import React from "react";
 import { images } from "../../Features/images";
 
-const Feature = () => {
+const Feature: React.FC = () => {
   return (
     <div className="flex md:flex-row flex-col justify-between items-center ">
       <div>

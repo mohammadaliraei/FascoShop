@@ -1,6 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 import { Carousel } from "@material-tailwind/react";
 import { IoIosStar } from "react-icons/io";
 

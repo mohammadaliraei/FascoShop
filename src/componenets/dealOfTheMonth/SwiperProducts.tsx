@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { images } from "../../Features/images";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
