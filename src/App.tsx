@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "./componenets/header/Header";
-import DealOfTheMonth from "./componenets/dealOfTheMonth/DealOfTheMonth";
 import Home from "./componenets/pages/home";
 
 const App: React.FC = () => {
