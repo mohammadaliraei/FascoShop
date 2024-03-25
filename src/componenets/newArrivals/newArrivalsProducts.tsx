@@ -24,7 +24,7 @@ const NewArrivalsProducts = () => {
 
   return (
     <div>
-      {products.map((product, index) => (
+      {products.map((product: any, index: any) => (
         <div key={index}>
           <img
             src={product.imgUrl}

@@ -1,11 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "@material-tailwind/react";
 import { IoIosStar } from "react-icons/io";
 
-const Testimonials = () => {
+const Testimonials: React.FC = () => {
   const [users, setUsers] = useState([]);
-  const [countBtn, setCountBtn] = useState<number>(0);
+  // const [countBtn, setCountBtn] = useState<number>(0);
 
   useEffect(() => {
     getUsers();
@@ -25,17 +25,17 @@ const Testimonials = () => {
       console.log(`console error ${error}`);
     }
   }
-  const leftClickBtn = () => {
-    if (countBtn > 0) {
-      setCountBtn(countBtn - 1);
-    }
-  };
+  // const leftClickBtn = () => {
+  //   if (countBtn > 0) {
+  //     setCountBtn(countBtn - 1);
+  //   }
+  // };
 
-  const RightClickBtn = () => {
-    if (countBtn < users.length - 1) {
-      setCountBtn(countBtn + 1);
-    }
-  };
+  // const RightClickBtn = () => {
+  //   if (countBtn < users.length - 1) {
+  //     setCountBtn(countBtn + 1);
+  //   }
+  // };
 
   return (
     <div className="my-10 py-10 bg-gray-100">
@@ -62,7 +62,7 @@ const Testimonials = () => {
               </div>
             )}
           >
-            {users.map((user, index) => (
+            {users.map((user: any, index: any) => (
               <div
                 key={index}
                 className="flex justify-center items-center w-full my-10 "
