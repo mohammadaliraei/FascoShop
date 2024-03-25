@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Carousel } from "@material-tailwind/react";
+// import { Carousel } from "@material-tailwind/react";
 import { IoIosStar } from "react-icons/io";
 
 const Testimonials: React.FC = () => {
