@@ -1,5 +1,6 @@
 import React from "react";
 import { images } from "../../Features/images";
+import Buttons from "../../Features/buttons";
 
 const HeaderProduct = () => {
   return (
@@ -25,9 +26,10 @@ const HeaderProduct = () => {
             <br />
             <span className="text-2xl">COLLECTION</span>
           </h1>
-          <button className="w-32 h-10 my-4 bg-black text-white rounded-md text-base">
-            SHOP NOW
-          </button>
+          <Buttons
+            label="SHOP NOW"
+            isSwitch={true}
+          />
         </div>
         <div className="flex w-full">
           <img
