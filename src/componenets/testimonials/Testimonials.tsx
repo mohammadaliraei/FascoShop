@@ -5,7 +5,6 @@ import { IoIosStar } from "react-icons/io";
 
 const Testimonials: React.FC = () => {
   const [users, setUsers] = useState([]);
-  // const [countBtn, setCountBtn] = useState<number>(0);
 
   useEffect(() => {
     getUsers();
@@ -25,18 +24,6 @@ const Testimonials: React.FC = () => {
       console.log(`console error ${error}`);
     }
   }
-  // const leftClickBtn = () => {
-  //   if (countBtn > 0) {
-  //     setCountBtn(countBtn - 1);
-  //   }
-  // };
-
-  // const RightClickBtn = () => {
-  //   if (countBtn < users.length - 1) {
-  //     setCountBtn(countBtn + 1);
-  //   }
-  // };
-
   return (
     <div className="my-10 py-10 bg-gray-100">
       <div className="flex text-center flex-col gap-4 ">
