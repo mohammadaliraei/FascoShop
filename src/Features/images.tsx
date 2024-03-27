@@ -18,8 +18,16 @@ import WarranyProtection from "../assets/images/WarranyProtection.svg";
 import HighQuality from "../assets/images/HighQuality.svg";
 import manFooter from "../assets/images/man-Footer.svg";
 import womanFooter from "../assets/images/woman-footer.svg";
+import R1 from "../assets/images/R1.jpg";
+import R2 from "../assets/images/R2.jpg";
+import R3 from "../assets/images/R3.jpg";
+import R4 from "../assets/images/R4.jpg";
 
 export const images = {
+  R1: R1,
+  R2: R2,
+  R3: R3,
+  R4: R4,
   manFooter: manFooter,
   womanFooter: womanFooter,
   freeShiping: freeShiping,
