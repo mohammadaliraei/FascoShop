@@ -45,7 +45,7 @@ const Feature: React.FC = () => {
         const { id, Icon, title, description } = feature;
         return (
           <div
-            // key={id}
+            key={id.toString()}
             className="flex flex-row gap-4"
           >
             <Icon size={50} />
