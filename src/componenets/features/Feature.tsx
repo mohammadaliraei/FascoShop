@@ -11,7 +11,7 @@ interface FeturesProp {
   description: String;
 }
 
-const Feature = () => {
+const Feature: React.FC = () => {
   const features: FeturesProp[] = [
     {
       id: 0,
