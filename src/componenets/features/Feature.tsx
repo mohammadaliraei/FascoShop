@@ -45,7 +45,7 @@ const Feature = () => {
         const { id, Icon, title, description } = feature;
         return (
           <div
-            key={id}
+            // key={id}
             className="flex flex-row gap-4"
           >
             <Icon size={50} />
