@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { images } from "../../Features/images";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { Carousel } from "flowbite-react";
 
 const SwiperProducts = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,8 +27,8 @@ const SwiperProducts = () => {
   };
 
   return (
-    <div className="flex flex-row h-full w-full gap-4 overflow-hidden">
-      <div className="flex justify-between w-[15%] items-end py-10">
+    <div className="flex flex-row h-full w-full gap-4 ">
+      {/* <div className="flex justify-between w-[10%] items-end py-10">
         <button onClick={prevIndex}>
           <FaArrowCircleLeft className="w-7 h-7" />
         </button>
@@ -47,7 +48,15 @@ const SwiperProducts = () => {
             }}
           />
         ))}
-      </div>
+      </div> */}
+      <Carousel>
+        {dataImages.map((images, i) => (
+          <img
+            key={i}
+            src={images}
+          />
+        ))}
+      </Carousel>
     </div>
   );
 };

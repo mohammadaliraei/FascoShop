@@ -11,7 +11,7 @@ const Gallery = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 py-12">
         <h1 className="flex text-center text-3xl font-bold">
           Follow Us On Instagram
         </h1>
@@ -22,13 +22,13 @@ const Gallery = () => {
           illum consequatur? Qui expedita aperiam doloremque nulla facilis,
           quidem iste quod?
         </h1>
-        <div className="flex flex-row pt-4 gap-2">
+        <div className="md:flex md:flex-row md:gap-2  grid grid-cols-2 gap-10 pt-4 ">
           {dataImages.map((image, index) => (
             <div className="flex flex-1">
               <img
                 key={index}
                 src={image}
-                className="object-cover w-48 "
+                className="object-cover w-48 rounded-md"
               />
             </div>
           ))}

@@ -39,14 +39,14 @@ const NewArrivals: React.FC = () => {
     <div className="flex flex-col justify-center my-12 items-center w-full gap-8">
       <div className="flex flex-col gap-6 justify-center items-center">
         <h1 className="text-2xl font-bold">New Arrivals</h1>
-        <h1 className="text-1xl text-center leading-7 text-gray-700 w-[60%]">
+        <h1 className="text-1xl text-center leading-7 text-gray-700 md:w-[60%]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
           praesentium ea voluptatum numquam quod atque deleniti distinctio eum
           facere corrupti. Modi quas magnam facere accusamus consectetur,
           temporibus mollitia corporis ab!
         </h1>
       </div>
-      <div className="flex flex-row gap-8 pt-8">
+      <div className="md:flex md:flex-row md:px-28 justify-between grid grid-cols-2 w-full pt-6">
         {buttonList.map((item, index) => (
           <Buttons
             key={item.id}
@@ -57,7 +57,7 @@ const NewArrivals: React.FC = () => {
         ))}
       </div>
       <div className="flex p-12 justify-center items-center w-full  bg-gray-200">
-        <div className=" grid grid-cols-3 gap-12">
+        <div className=" grid md:grid-cols-3 gap-12">
           {products.map((product: any, index: any) => (
             <div
               key={index}

@@ -1,33 +1,61 @@
 import React from "react";
-import { images } from "../../Features/images";
+import { FaHandHoldingHeart } from "react-icons/fa";
+import { MdOutlineSupportAgent } from "react-icons/md";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { SiNginxproxymanager } from "react-icons/si";
 
-const Feature: React.FC = () => {
+interface FeturesProp {
+  id: Number;
+  Icon: React.ElementType;
+  title: String;
+  description: String;
+}
+
+const Feature = () => {
+  const features: FeturesProp[] = [
+    {
+      id: 0,
+      Icon: FaHandHoldingHeart,
+      title: "High Quality",
+      description: "crafted from top materials",
+    },
+    {
+      id: 1,
+      Icon: SiNginxproxymanager,
+      title: "Warrany Protection",
+      description: "over 2 years",
+    },
+    {
+      id: 2,
+      Icon: LiaShippingFastSolid,
+      title: "Free Shipping",
+      description: "order over 150$",
+    },
+    {
+      id: 3,
+      Icon: MdOutlineSupportAgent,
+      title: "24 / 7 support",
+      description: "dedicated support",
+    },
+  ];
+
   return (
-    <div className="flex md:flex-row flex-col justify-between items-center ">
-      <div>
-        <img
-          src={images.HighQuality}
-          className="w-64 h-64"
-        />
-      </div>
-      <div>
-        <img
-          src={images.WarranyProtection}
-          className="w-64 h-64"
-        />
-      </div>
-      <div>
-        <img
-          src={images.freeShiping}
-          className="w-56 h-40"
-        />
-      </div>
-      <div>
-        <img
-          src={images.support}
-          className="w-56 h-40"
-        />
-      </div>
+    <div className="flex md:flex-row md:justify-between md:px-0 px-20 flex-col gap-10  items-start bg-gray-100 py-8 rounded-md">
+      {features.map((feature) => {
+        const { id, Icon, title, description } = feature;
+        return (
+          <div
+            key={id}
+            className="flex flex-row gap-4"
+          >
+            <Icon size={50} />
+            <div className="flex flex-col">
+              <h1 className="font-bold">{title}</h1>
+              <h1>{description}</h1>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

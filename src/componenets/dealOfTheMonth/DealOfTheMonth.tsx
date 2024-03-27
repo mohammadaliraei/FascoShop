@@ -9,28 +9,28 @@ const DealOfTheMonth = () => {
   const [Sec, setSec] = useState(0);
   const [currentDate, setCurrentDate] = useState(0);
 
-  useEffect(() => {
-    const currentDateObj = new Date().getTime();
-    const changingDateObj = new Date("23 march 2024").getTime();
+  // useEffect(() => {
+  //   const currentDateObj = new Date().getTime();
+  //   const changingDateObj = new Date("23 October 2024").getTime();
 
-    const totalSeconds = (changingDateObj - currentDateObj) / 1000; // convet to second
-    setInterval(() => {
-      setCurrentDate(totalSeconds - 1);
-    }, 1000);
+  //   const totalSeconds = (changingDateObj - currentDateObj) / 1000; // convet to second
+  //   setInterval(() => {
+  //     setCurrentDate(totalSeconds - 1);
+  //   }, 1000);
 
-    setDays(Math.floor(totalSeconds / 86400)); // convert to days
-    setHr(Math.floor(totalSeconds / 3600) % 24);
-    setMins(Math.floor(totalSeconds / 60) % 60);
-    setSec(Math.floor(totalSeconds % 60));
-  }, [currentDate]);
+  //   setDays(Math.floor(totalSeconds / 86400)); // convert to days
+  //   setHr(Math.floor(totalSeconds / 3600) % 24);
+  //   setMins(Math.floor(totalSeconds / 60) % 60);
+  //   setSec(Math.floor(totalSeconds % 60));
+  // }, [currentDate]);
 
   return (
-    <div className="flex md:flex-row flex-col  w-full pl-5 py-12 rounded-md bg-gray-100">
-      <div className="flex flex-col pl-10 py-12 justify-between ">
+    <div className="flex md:flex-row flex-col py-10 w-full rounded-md bg-gray-100">
+      <div className="flex flex-col md:w-[50%] w-[100%] md:pl-10 md:items-start items-center justify-between gap-5">
         <div>
           <h1 className="text-4xl font-bold">Deals of the month</h1>
         </div>
-        <div className="text-gray-600 py-4 w-[40%] md:w-[70%]">
+        <div className="text-gray-600 py-4 md:w-[70%]">
           <h1>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum a
             maiores assumenda, animi similique aspernatur, laudantium laborum
@@ -73,7 +73,7 @@ const DealOfTheMonth = () => {
           </div>
         </div>
       </div>
-      <div className="flex  w-[90%] h-full items-center ">
+      <div className="flex  md:w-[60%] h-[500px] items-center ">
         <SwiperProducts />
       </div>
     </div>

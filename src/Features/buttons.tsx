@@ -5,16 +5,16 @@ type ButtonProps = {
   isSwitch: boolean;
 } & HTMLAttributes<HTMLButtonElement>;
 
-const Buttons: React.FC<ButtonProps> = ({ label, isSwitch, ...rest }) => {
+const Buttons: React.FC<ButtonProps> = ({ label, isSwitch, ...ali }) => {
   return (
     <button
-      className={isSwitch ? "bg-black text-white" : "bg-gray-100 text-gray-700"}
+      className={isSwitch ? "bg-black text-white" : "bg-gray-200 text-gray-700"}
       style={{
         borderRadius: "0.375rem",
         padding: "0.5rem 1rem",
         margin: "0.5rem",
       }}
-      {...rest}
+      {...ali}
     >
       {label}
     </button>

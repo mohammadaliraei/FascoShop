@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-// import { Carousel } from "@material-tailwind/react";
+import { Carousel } from "@material-tailwind/react";
 import { IoIosStar } from "react-icons/io";
 
 const Testimonials: React.FC = () => {
@@ -32,8 +32,8 @@ const Testimonials: React.FC = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro,
           velit!
         </h1>
-        <div className="flex flex-row  overflow-hidden">
-          {/* <Carousel
+        <div className="md:flex md:flex-row  overflow-hidden">
+          <Carousel
             className="rounded-xl "
             navigation={({ setActiveIndex, activeIndex, length }) => (
               <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
@@ -48,37 +48,37 @@ const Testimonials: React.FC = () => {
                 ))}
               </div>
             )}
-          > */}
-          {users.map((user: any, index: any) => (
-            <div
-              key={index}
-              className="flex justify-center items-center w-full my-10 "
-            >
-              <div className="flex flex-row w-[70%] bg-gray-200 shadow-md rounded-xl  overflow-hidden">
-                <div className="w-[30%] h-full bg-red-400">
-                  <img
-                    key={index} // Added key prop
-                    src={user.imgUrl}
-                    className={`flex object-cover w-full h-52`}
-                    alt={`Testimonial ${index}`}
-                  />
-                </div>
-                <div className="flex flex-col w-full gap-4 text-start  py-8 px-5">
-                  <h1 className="text-base">{user.description}</h1>
-                  <div className="flex flex-row">
-                    {Array.from({ length: user.stars }).map((_, i) => (
-                      <div key={i}>
-                        <IoIosStar className="text-yellow-800" />
-                      </div>
-                    ))}
+          >
+            {users.map((user: any, index: any) => (
+              <div
+                key={index}
+                className="flex justify-center items-center w-full my-10 "
+              >
+                <div className="flex md:flex-row flex-col  w-[70%] bg-gray-200 shadow-md rounded-xl  overflow-hidden">
+                  <div className="md:w-[30%] h-full bg-red-400">
+                    <img
+                      key={index} // Added key prop
+                      src={user.imgUrl}
+                      className={`flex object-cover w-full h-52`}
+                      alt={`Testimonial ${index}`}
+                    />
                   </div>
-                  <h1 className="text-lg">{user.name}</h1>
-                  <h1>{user.job}</h1>
+                  <div className="flex flex-col w-full gap-4 text-start  py-8 px-5">
+                    <h1 className="text-base">{user.description}</h1>
+                    <div className="flex flex-row">
+                      {Array.from({ length: user.stars }).map((_, i) => (
+                        <div key={i}>
+                          <IoIosStar className="text-yellow-800" />
+                        </div>
+                      ))}
+                    </div>
+                    <h1 className="text-lg">{user.name}</h1>
+                    <h1>{user.job}</h1>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-          {/* </Carousel> */}
+            ))}
+          </Carousel>
         </div>
       </div>
     </div>
