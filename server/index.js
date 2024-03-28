@@ -12,7 +12,9 @@ app.use(cors());
 // Allow specific origin(s)
 app.use(
   cors({
-    origin: "https://yourdeployedsite.com",
+    origin: "https://fascoshop.vercel.app/",
+    methods: ["POST", "GET"],
+    credentials: true,
   })
 );
 
