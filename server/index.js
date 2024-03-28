@@ -6,6 +6,16 @@ const ProductsModel = require("./src/models/products");
 const UsersModel = require("./src/models/users");
 const UserModel = require("./src/models/users");
 
+const cors = require("cors");
+// Allow all origins
+app.use(cors());
+// Allow specific origin(s)
+app.use(
+  cors({
+    origin: "https://yourdeployedsite.com",
+  })
+);
+
 const url =
   "mongodb+srv://muhammad:muhammad1234@nodetest.napzydw.mongodb.net/nodeTest?retryWrites=true&w=majority";
 
