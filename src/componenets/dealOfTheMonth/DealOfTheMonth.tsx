@@ -9,20 +9,20 @@ const DealOfTheMonth = () => {
   const [Sec, setSec] = useState(0);
   const [currentDate, setCurrentDate] = useState(0);
 
-  // useEffect(() => {
-  //   const currentDateObj = new Date().getTime();
-  //   const changingDateObj = new Date("23 October 2024").getTime();
+  useEffect(() => {
+    const currentDateObj = new Date().getTime();
+    const changingDateObj = new Date("23 October 2024").getTime();
 
-  //   const totalSeconds = (changingDateObj - currentDateObj) / 1000; // convet to second
-  //   setInterval(() => {
-  //     setCurrentDate(totalSeconds - 1);
-  //   }, 1000);
+    const totalSeconds = (changingDateObj - currentDateObj) / 1000; // convet to second
+    setInterval(() => {
+      setCurrentDate(totalSeconds - 1);
+    }, 1000);
 
-  //   setDays(Math.floor(totalSeconds / 86400)); // convert to days
-  //   setHr(Math.floor(totalSeconds / 3600) % 24);
-  //   setMins(Math.floor(totalSeconds / 60) % 60);
-  //   setSec(Math.floor(totalSeconds % 60));
-  // }, [currentDate]);
+    setDays(Math.floor(totalSeconds / 86400)); // convert to days
+    setHr(Math.floor(totalSeconds / 3600) % 24);
+    setMins(Math.floor(totalSeconds / 60) % 60);
+    setSec(Math.floor(totalSeconds % 60));
+  }, [currentDate]);
 
   return (
     <div className="flex md:flex-row flex-col py-10 w-full rounded-md bg-gray-100">
