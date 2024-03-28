@@ -18,7 +18,7 @@ const DealOfTheMonth = () => {
       setCurrentDate(totalSeconds - 1);
     }, 1000);
 
-    setDays(Math.floor(totalSeconds / 86400)); // convert to days
+    setDays(Math.floor(totalSeconds / 86400));
     setHr(Math.floor(totalSeconds / 3600) % 24);
     setMins(Math.floor(totalSeconds / 60) % 60);
     setSec(Math.floor(totalSeconds % 60));
